@@ -29,7 +29,7 @@ app = FastAPI(title="M2DG Basketball Platform API", version="1.0.0")
 api_router = APIRouter(prefix="/api")
 
 # Security
-security = HTTPBearer()
+security = HTTPBearer(auto_error=False)
 JWT_SECRET = "your-secret-key-here"  # In production, use environment variable
 JWT_ALGORITHM = "HS256"
 
