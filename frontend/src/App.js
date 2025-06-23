@@ -1,53 +1,150 @@
-import { useEffect } from "react";
+import React from "react";
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { AuthProvider, useAuth } from "./contexts/AuthContext";
+import Navbar from "./components/Navbar";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+// Pages
+import HomePage from "./pages/HomePage";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
+import Dashboard from "./pages/Dashboard";
+import GuestPage from "./pages/GuestPage";
+import CourtsPage from "./pages/CourtsPage";
+import CourtBookingPage from "./pages/CourtBookingPage";
+import TournamentsPage from "./pages/TournamentsPage";
+import ChallengesPage from "./pages/ChallengesPage";
+import TeamsPage from "./pages/TeamsPage";
+import ProfilePage from "./pages/ProfilePage";
+import MyBookingsPage from "./pages/MyBookingsPage";
+import CoachesPage from "./pages/CoachesPage";
+import ScoringPage from "./pages/ScoringPage";
 
-const Home = () => {
-  const helloWorldApi = async () => {
-    try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
-    }
-  };
+// Protected Route Component
+const ProtectedRoute = ({ children }) => {
+  const { isAuthenticated, loading } = useAuth();
+  
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="text-6xl mb-4">🏀</div>
+          <div className="text-xl text-gray-600">Loading...</div>
+        </div>
+      </div>
+    );
+  }
+  
+  return isAuthenticated ? children : <Navigate to="/login" />;
+};
 
-  useEffect(() => {
-    helloWorldApi();
-  }, []);
-
+function AppContent() {
   return (
-    <div>
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-      </header>
+    <div className="App">
+      <Router>
+        <Navbar />
+        <Routes>
+          {/* Public Routes */}
+          <Route path="/" element={<HomePage />} />
+          <Route path="/guest" element={<GuestPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+          
+          {/* Protected Routes */}
+          <Route 
+            path="/dashboard" 
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/profile" 
+            element={
+              <ProtectedRoute>
+                <ProfilePage />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/courts" 
+            element={
+              <ProtectedRoute>
+                <CourtsPage />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/courts/:courtId/book" 
+            element={
+              <ProtectedRoute>
+                <CourtBookingPage />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/tournaments" 
+            element={
+              <ProtectedRoute>
+                <TournamentsPage />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/challenges" 
+            element={
+              <ProtectedRoute>
+                <ChallengesPage />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/teams" 
+            element={
+              <ProtectedRoute>
+                <TeamsPage />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/bookings" 
+            element={
+              <ProtectedRoute>
+                <MyBookingsPage />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/coaches" 
+            element={
+              <ProtectedRoute>
+                <CoachesPage />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/scoring" 
+            element={
+              <ProtectedRoute>
+                <ScoringPage />
+              </ProtectedRoute>
+            } 
+          />
+          
+          {/* Catch all route */}
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+      </Router>
     </div>
   );
-};
+}
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <AuthProvider>
+      <AppContent />
+    </AuthProvider>
   );
 }
 
