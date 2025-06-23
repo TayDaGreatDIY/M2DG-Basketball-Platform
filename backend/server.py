@@ -291,6 +291,8 @@ async def get_current_user(credentials: HTTPAuthorizationCredentials = Depends(s
         return User(**user)
     except jwt.PyJWTError:
         raise HTTPException(status_code=401, detail="Invalid authentication credentials")
+    except Exception:
+        raise HTTPException(status_code=401, detail="Could not validate credentials")
 
 # Authentication Routes
 @api_router.post("/auth/register", response_model=Dict[str, str])
