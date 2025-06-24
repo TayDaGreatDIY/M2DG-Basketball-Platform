@@ -13,17 +13,72 @@ const GuestPage = () => {
 
   const fetchGuestData = async () => {
     try {
-      // For guest users, we'll show limited public information
-      const [courtsRes, tournamentsRes] = await Promise.all([
-        fetch(`${process.env.REACT_APP_BACKEND_URL}/api/courts`),
-        fetch(`${process.env.REACT_APP_BACKEND_URL}/api/tournaments`)
-      ]);
-      
-      const courtsData = await courtsRes.json();
-      const tournamentsData = await tournamentsRes.json();
-      
-      setCourts(courtsData.slice(0, 3)); // Show only first 3
-      setTournaments(tournamentsData.slice(0, 3)); // Show only first 3
+      // Mock data for guest users since API requires authentication
+      const mockCourts = [
+        {
+          id: '1',
+          name: 'Downtown Basketball Court',
+          location: 'Downtown Sports Complex',
+          price: 25,
+          amenities: ['Indoor', 'Air Conditioning', 'Scoreboard'],
+          rating: 4.8,
+          available_slots: 8
+        },
+        {
+          id: '2', 
+          name: 'Riverside Outdoor Court',
+          location: 'Riverside Park',
+          price: 15,
+          amenities: ['Outdoor', 'Parking', 'Lighting'],
+          rating: 4.5,
+          available_slots: 12
+        },
+        {
+          id: '3',
+          name: 'Elite Training Center',
+          location: 'Elite Sports Academy',
+          price: 40,
+          amenities: ['Premium', 'Professional Grade', 'Video Recording'],
+          rating: 4.9,
+          available_slots: 6
+        }
+      ];
+
+      const mockTournaments = [
+        {
+          id: '1',
+          name: 'Summer Basketball Championship',
+          start_date: '2024-02-15',
+          entry_fee: 50,
+          prize_pool: 1000,
+          participants: 24,
+          max_participants: 32,
+          status: 'upcoming'
+        },
+        {
+          id: '2',
+          name: 'Weekend Warriors League',
+          start_date: '2024-02-20',
+          entry_fee: 25,
+          prize_pool: 500,
+          participants: 16,
+          max_participants: 16,
+          status: 'active'
+        },
+        {
+          id: '3',
+          name: 'Youth Basketball Tournament',
+          start_date: '2024-03-01',
+          entry_fee: 20,
+          prize_pool: 300,
+          participants: 8,
+          max_participants: 16,
+          status: 'upcoming'
+        }
+      ];
+
+      setCourts(mockCourts);
+      setTournaments(mockTournaments);
     } catch (error) {
       console.error('Failed to fetch guest data:', error);
     } finally {
