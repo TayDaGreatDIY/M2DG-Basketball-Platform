@@ -129,6 +129,34 @@ const Dashboard = () => {
       icon: '💭',
       link: '/forums',
       color: 'bg-cyan-500 hover:bg-cyan-600'
+    },
+    {
+      title: 'Advanced Analytics',
+      description: 'Deep performance insights',
+      icon: '📊',
+      link: '/analytics',
+      color: 'bg-blue-600 hover:bg-blue-700'
+    },
+    {
+      title: 'Progress Tracking',
+      description: 'Monitor your improvement',
+      icon: '📈',
+      link: '/progress',
+      color: 'bg-green-600 hover:bg-green-700'
+    },
+    {
+      title: 'AI Recommendations',
+      description: 'Personalized training suggestions',
+      icon: '🤖',
+      link: '/recommendations',
+      color: 'bg-purple-600 hover:bg-purple-700'
+    },
+    {
+      title: 'Achievements',
+      description: 'Unlock badges and milestones',
+      icon: '🏅',
+      link: '/achievements',
+      color: 'bg-yellow-600 hover:bg-yellow-700'
     }
   ];
 
