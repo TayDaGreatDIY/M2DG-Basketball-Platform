@@ -564,15 +564,18 @@ frontend:
 
   - task: "Guest Experience"
     implemented: true
-    working: "NA"
+    working: true
     file: "/app/frontend/src/pages/GuestPage.js"
     stuck_count: 0
     priority: "medium"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: "NA"
         agent: "testing"
         comment: "Need to test /guest page for browsing without account, verify courts and tournaments preview, and test sign up call-to-action buttons"
+      - working: true
+        agent: "testing"
+        comment: "Guest page loads successfully. Courts and tournaments preview is displayed correctly. Sign up call-to-action buttons ('Join Now', 'Sign up to book', etc.) are displayed and work correctly."
 
   - task: "Dashboard Functionality"
     implemented: true
