@@ -594,15 +594,18 @@ frontend:
 
   - task: "Court Booking System"
     implemented: true
-    working: "NA"
+    working: true
     file: "/app/frontend/src/pages/CourtsPage.js"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: "NA"
         agent: "testing"
         comment: "Need to test /courts page with court listing and filtering, court details, and booking form"
+      - working: true
+        agent: "testing"
+        comment: "Courts page loads successfully with court listing. Filtering options (All Courts, Indoor, Outdoor, Available Now) work correctly. Court details are displayed correctly. Court booking form loads successfully with date/time selection, duration selection, and cost calculation."
 
   - task: "Tournament Management"
     implemented: true
