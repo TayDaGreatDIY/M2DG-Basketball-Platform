@@ -502,17 +502,161 @@ backend:
         comment: "Fixed the JWT protection by setting auto_error=False in the HTTPBearer security scheme and adding a check for None credentials in the get_current_user function. The unauthorized access test now correctly returns a 401 Unauthorized status."
 
 frontend:
-  - task: "Frontend Implementation"
+  - task: "Homepage & Navigation"
+    implemented: true
+    working: "NA"
+    file: "/app/frontend/src/pages/HomePage.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "testing"
+        comment: "Need to test homepage loading with hero section and basketball features, navigation between pages, responsive design, and basketball-themed styling"
+
+  - task: "Authentication Flow - Registration"
+    implemented: true
+    working: "NA"
+    file: "/app/frontend/src/pages/RegisterPage.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "testing"
+        comment: "Need to test user registration form with username, email, password, full_name, and phone fields"
+
+  - task: "Authentication Flow - Login"
+    implemented: true
+    working: "NA"
+    file: "/app/frontend/src/pages/LoginPage.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "testing"
+        comment: "Need to test user login form with email and password fields"
+
+  - task: "Authentication Flow - Protected Routes"
     implemented: true
     working: "NA"
     file: "/app/frontend/src/App.js"
     stuck_count: 0
     priority: "high"
-    needs_retesting: false
+    needs_retesting: true
     status_history:
       - working: "NA"
         agent: "testing"
-        comment: "Frontend testing not required at this time"
+        comment: "Need to test protected route redirects (should redirect to login if not authenticated)"
+
+  - task: "Guest Experience"
+    implemented: true
+    working: "NA"
+    file: "/app/frontend/src/pages/GuestPage.js"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "testing"
+        comment: "Need to test /guest page for browsing without account, verify courts and tournaments preview, and test sign up call-to-action buttons"
+
+  - task: "Dashboard Functionality"
+    implemented: true
+    working: "NA"
+    file: "/app/frontend/src/pages/Dashboard.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "testing"
+        comment: "Need to test dashboard loading with basketball activity overview, quick action buttons, stats display, and navigation to all basketball features"
+
+  - task: "Court Booking System"
+    implemented: true
+    working: "NA"
+    file: "/app/frontend/src/pages/CourtsPage.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "testing"
+        comment: "Need to test /courts page with court listing and filtering, court details, and booking form"
+
+  - task: "Tournament Management"
+    implemented: true
+    working: "NA"
+    file: "/app/frontend/src/pages/TournamentsPage.js"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "testing"
+        comment: "Need to test /tournaments page with tournament listing, tournament creation form, and registration functionality"
+
+  - task: "Team System"
+    implemented: true
+    working: "NA"
+    file: "/app/frontend/src/pages/TeamsPage.js"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "testing"
+        comment: "Need to test /teams page with browse/my teams tabs, team creation form, join team functionality, and referral code system"
+
+  - task: "Challenge System"
+    implemented: true
+    working: "NA"
+    file: "/app/frontend/src/pages/ChallengesPage.js"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "testing"
+        comment: "Need to test /challenges page with open/received/my challenges tabs, challenge creation form, and challenge acceptance functionality"
+
+  - task: "Coach Marketplace"
+    implemented: true
+    working: "NA"
+    file: "/app/frontend/src/pages/CoachesPage.js"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "testing"
+        comment: "Need to test /coaches page with coach listings, coach profile creation form, coach filtering, and booking interface"
+
+  - task: "Live Scoring"
+    implemented: true
+    working: "NA"
+    file: "/app/frontend/src/pages/ScoringPage.js"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "testing"
+        comment: "Need to test /scoring page interface, game creation form, live scoring controls, and game completion tracking"
+
+  - task: "User Profile"
+    implemented: true
+    working: "NA"
+    file: "/app/frontend/src/pages/ProfilePage.js"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "testing"
+        comment: "Need to test /profile page with profile/stats/achievements tabs, profile editing functionality, and form validation"
 
 metadata:
   created_by: "testing_agent"
