@@ -113,6 +113,19 @@ const HomePage = () => {
                   )}
                 </div>
 
+                {/* Admin Demo Link - Prominent */}
+                <div className="mt-8">
+                  <Link
+                    to="/admin-demo"
+                    className="inline-flex items-center space-x-2 bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white font-bold py-3 px-8 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 shadow-lg border-2 border-yellow-400"
+                  >
+                    <span>🔧</span>
+                    <span>VIEW ALL PREMIUM FEATURES (Admin Demo)</span>
+                    <span>🎯</span>
+                  </Link>
+                  <p className="text-center text-gray-300 text-sm mt-2">No login required • See $100+ worth of premium features</p>
+                </div>
+
                 {/* Stats */}
                 <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
                   <div className="text-center">
