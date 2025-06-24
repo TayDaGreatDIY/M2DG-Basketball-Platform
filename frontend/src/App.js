@@ -20,6 +20,12 @@ import MyBookingsPage from "./pages/MyBookingsPage";
 import CoachesPage from "./pages/CoachesPage";
 import ScoringPage from "./pages/ScoringPage";
 
+// Phase 3 - Social Features
+import LeaderboardsPage from "./pages/LeaderboardsPage";
+import GameHistoryPage from "./pages/GameHistoryPage";
+import SocialFeaturesPage from "./pages/SocialFeaturesPage";
+import CommunityForumsPage from "./pages/CommunityForumsPage";
+
 // Protected Route Component
 const ProtectedRoute = ({ children }) => {
   const { isAuthenticated, loading } = useAuth();
@@ -50,7 +56,7 @@ function AppContent() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
           
-          {/* Protected Routes */}
+          {/* Protected Routes - Core Features */}
           <Route 
             path="/dashboard" 
             element={
@@ -128,6 +134,40 @@ function AppContent() {
             element={
               <ProtectedRoute>
                 <ScoringPage />
+              </ProtectedRoute>
+            } 
+          />
+
+          {/* Protected Routes - Phase 3: Social Features */}
+          <Route 
+            path="/leaderboards" 
+            element={
+              <ProtectedRoute>
+                <LeaderboardsPage />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/game-history" 
+            element={
+              <ProtectedRoute>
+                <GameHistoryPage />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/social" 
+            element={
+              <ProtectedRoute>
+                <SocialFeaturesPage />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/forums" 
+            element={
+              <ProtectedRoute>
+                <CommunityForumsPage />
               </ProtectedRoute>
             } 
           />
