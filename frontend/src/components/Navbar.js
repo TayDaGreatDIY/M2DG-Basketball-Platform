@@ -51,6 +51,18 @@ const Navbar = () => {
                   Teams
                 </Link>
                 <Link
+                  to="/leaderboards"
+                  className="text-white hover:text-orange-200 px-3 py-2 rounded-md text-sm font-medium"
+                >
+                  Leaderboards
+                </Link>
+                <Link
+                  to="/social"
+                  className="text-white hover:text-orange-200 px-3 py-2 rounded-md text-sm font-medium"
+                >
+                  Social
+                </Link>
+                <Link
                   to="/profile"
                   className="text-white hover:text-orange-200 px-3 py-2 rounded-md text-sm font-medium"
                 >
