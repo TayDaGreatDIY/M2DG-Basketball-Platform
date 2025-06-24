@@ -31,6 +31,9 @@ import AdvancedAnalyticsPage from "./pages/AdvancedAnalyticsPage";
 import ProgressTrackingPage from "./pages/ProgressTrackingPage";
 import RecommendationEnginePage from "./pages/RecommendationEnginePage";
 import AchievementSystemPage from "./pages/AchievementSystemPage";
+import AdminDemoPage from "./pages/AdminDemoPage";
+import PaymentPage from "./pages/PaymentPage";
+import VideoAnalysisPage from "./pages/VideoAnalysisPage";
 
 // Protected Route Component
 const ProtectedRoute = ({ children }) => {
