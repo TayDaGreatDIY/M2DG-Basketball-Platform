@@ -230,7 +230,7 @@ const ProfilePage = () => {
                     name="height"
                     value={profile.height}
                     onChange={handleChange}
-                    placeholder="e.g., 6'2\""
+                    placeholder="e.g., 6 feet 2 inches"
                     className="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-orange-500 focus:border-orange-500"
                   />
                 </div>
