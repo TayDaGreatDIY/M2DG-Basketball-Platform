@@ -1,0 +1,31 @@
+{
+  "short_name": "M2DG Basketball",
+  "name": "M2DG Basketball Platform",
+  "description": "Ultimate basketball platform for court booking, tournaments, and team management",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23f97316'/%3E%3Ctext x='50' y='65' font-size='40' text-anchor='middle' fill='white'%3E🏀%3C/text%3E%3C/svg%3E",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23f97316'/%3E%3Ctext x='50' y='65' font-size='40' text-anchor='middle' fill='white'%3E🏀%3C/text%3E%3C/svg%3E",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#f97316",
+  "background_color": "#1e293b",
+  "orientation": "portrait-primary",
+  "categories": ["sports", "entertainment", "social"],
+  "screenshots": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 640'%3E%3Crect width='320' height='640' fill='%23gradient'/%3E%3Ctext x='160' y='320' font-size='24' text-anchor='middle' fill='white'%3EM2DG Basketball%3C/text%3E%3C/svg%3E",
+      "sizes": "320x640",
+      "type": "image/svg+xml",
+      "form_factor": "narrow"
+    }
+  ]
+}
