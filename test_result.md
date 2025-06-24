@@ -665,9 +665,17 @@ metadata:
   run_ui: false
 
 test_plan:
-  current_focus: []
+  current_focus:
+    - "Homepage & Navigation"
+    - "Authentication Flow - Registration"
+    - "Authentication Flow - Login"
+    - "Authentication Flow - Protected Routes"
+    - "Dashboard Functionality"
+    - "Court Booking System"
+    - "Team System"
+    - "Challenge System"
   stuck_tasks: []
-  test_all: false
+  test_all: true
   test_priority: "high_first"
 
 agent_communication:
