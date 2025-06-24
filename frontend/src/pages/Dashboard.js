@@ -101,6 +101,34 @@ const Dashboard = () => {
       icon: '📊',
       link: '/scoring',
       color: 'bg-indigo-500 hover:bg-indigo-600'
+    },
+    {
+      title: 'Leaderboards',
+      description: 'See where you rank in the community',
+      icon: '🏆',
+      link: '/leaderboards',
+      color: 'bg-yellow-500 hover:bg-yellow-600'
+    },
+    {
+      title: 'Game History',
+      description: 'Track your basketball journey',
+      icon: '📈',
+      link: '/game-history',
+      color: 'bg-pink-500 hover:bg-pink-600'
+    },
+    {
+      title: 'Social Hub',
+      description: 'Connect with fellow players',
+      icon: '💬',
+      link: '/social',
+      color: 'bg-teal-500 hover:bg-teal-600'
+    },
+    {
+      title: 'Community Forums',
+      description: 'Join basketball discussions',
+      icon: '💭',
+      link: '/forums',
+      color: 'bg-cyan-500 hover:bg-cyan-600'
     }
   ];
 
