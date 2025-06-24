@@ -591,6 +591,9 @@ frontend:
       - working: true
         agent: "testing"
         comment: "Dashboard loads successfully with basketball activity overview. Quick action buttons (9 buttons found) for managing basketball activities are displayed correctly. Stats display (7 stats found) works correctly. Navigation to basketball features (e.g., Courts page) works correctly."
+      - working: true
+        agent: "testing"
+        comment: "Dashboard now shows 10 quick action buttons including all social features (Leaderboards, Game History, Social Hub, Community Forums). The enhanced navigation works correctly with all social feature buttons linking to their respective pages."
 
   - task: "Court Booking System"
     implemented: true
@@ -684,6 +687,81 @@ frontend:
       - working: "NA"
         agent: "testing"
         comment: "Need to test /profile page with profile/stats/achievements tabs, profile editing functionality, and form validation"
+        
+  - task: "Leaderboards Page"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/pages/LeaderboardsPage.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: "NA"
+        agent: "testing"
+        comment: "Need to test leaderboards page loading with basketball rankings, tab switching, player rankings display, rank badges, achievement categories, and ranking system information"
+      - working: true
+        agent: "testing"
+        comment: "Leaderboards page loads successfully with basketball rankings. Tab switching between Overall/Weekly/Monthly rankings works correctly. Player rankings display with stats (points, wins, losses, win rate) works correctly. Rank badges and achievement categories (Top Scorer, Win Streak, Most Active) are displayed correctly. Ranking system information section is present and well-formatted. The page is responsive on mobile devices."
+        
+  - task: "Game History Page"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/pages/GameHistoryPage.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: "NA"
+        agent: "testing"
+        comment: "Need to test game history page loading with game tracking, filter functionality, game cards display, detailed stats viewing, and game details modal"
+      - working: true
+        agent: "testing"
+        comment: "Game History page loads successfully with game tracking. Filter functionality (All Games, Wins, Losses, 1v1, Team Games) works correctly. Game cards display with results, scores, and highlights. Game details modal functionality works correctly. Game statistics overview (total games, wins, losses, win rate, avg points) is displayed correctly. The page is responsive on mobile devices."
+        
+  - task: "Social Features Page"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/pages/SocialFeaturesPage.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: "NA"
+        agent: "testing"
+        comment: "Need to test social hub page loading with messaging interface, tab switching, conversations list, message threading, and message input"
+      - working: true
+        agent: "testing"
+        comment: "Social Features page loads successfully with messaging interface. Tab switching between Messages/Friends/Find Players works correctly. Conversations list is displayed with mock data. Message threading works correctly when selecting a conversation. Message input and sending functionality works correctly. The page is responsive on mobile devices."
+        
+  - task: "Community Forums Page"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/pages/CommunityForumsPage.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: "NA"
+        agent: "testing"
+        comment: "Need to test community forums page loading with discussion categories, category navigation, post listings, post creation modal, and reply system"
+      - working: true
+        agent: "testing"
+        comment: "Community Forums page loads successfully with discussion categories. Category navigation (General, Tips, Tournaments, Teams) works correctly. Post listings with titles, authors, replies, and likes are displayed correctly. Post detail view and reply system work correctly. There is a minor issue with the post creation modal where the Create Post button is sometimes not clickable due to an overlay, but the overall functionality is working. The page is responsive on mobile devices."
+        
+  - task: "Enhanced Navigation & Dashboard"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/components/Navbar.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: "NA"
+        agent: "testing"
+        comment: "Need to test updated Dashboard with 10 quick action buttons and updated Navbar with Leaderboards and Social links"
+      - working: true
+        agent: "testing"
+        comment: "Dashboard now shows 10 quick action buttons including all social features (Leaderboards, Game History, Social Hub, Community Forums). Navbar has been updated with Leaderboards and Social links. Navigation between all social features works correctly. The basketball theming is consistent across all new features."
 
 metadata:
   created_by: "testing_agent"
