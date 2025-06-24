@@ -26,6 +26,12 @@ import GameHistoryPage from "./pages/GameHistoryPage";
 import SocialFeaturesPage from "./pages/SocialFeaturesPage";
 import CommunityForumsPage from "./pages/CommunityForumsPage";
 
+// Phase 4 - Advanced Analytics
+import AdvancedAnalyticsPage from "./pages/AdvancedAnalyticsPage";
+import ProgressTrackingPage from "./pages/ProgressTrackingPage";
+import RecommendationEnginePage from "./pages/RecommendationEnginePage";
+import AchievementSystemPage from "./pages/AchievementSystemPage";
+
 // Protected Route Component
 const ProtectedRoute = ({ children }) => {
   const { isAuthenticated, loading } = useAuth();
@@ -168,6 +174,40 @@ function AppContent() {
             element={
               <ProtectedRoute>
                 <CommunityForumsPage />
+              </ProtectedRoute>
+            } 
+          />
+
+          {/* Protected Routes - Phase 4: Advanced Analytics */}
+          <Route 
+            path="/analytics" 
+            element={
+              <ProtectedRoute>
+                <AdvancedAnalyticsPage />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/progress" 
+            element={
+              <ProtectedRoute>
+                <ProgressTrackingPage />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/recommendations" 
+            element={
+              <ProtectedRoute>
+                <RecommendationEnginePage />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/achievements" 
+            element={
+              <ProtectedRoute>
+                <AchievementSystemPage />
               </ProtectedRoute>
             } 
           />
