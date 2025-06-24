@@ -5,8 +5,44 @@
 .vscode/
 
 # Dependencies
+# Environment variables (contains API keys)
+backend/.env
+frontend/.env
+
+# Node modules
 node_modules/
-/node_modules
+frontend/node_modules/
+
+# Build files
+frontend/build/
+backend/__pycache__/
+
+# Cache files
+frontend/node_modules/.cache/
+frontend/.eslintcache
+
+# Logs
+*.log
+*.err.log
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.temp
 /.pnp
 .pnp.js
 .yarn/install-state.gz
