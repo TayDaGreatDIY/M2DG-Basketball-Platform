@@ -65,6 +65,11 @@ function AppContent() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
           
+          {/* ADMIN DEMO - NO LOGIN REQUIRED */}
+          <Route path="/admin-demo" element={<AdminDemoPage />} />
+          <Route path="/payment" element={<PaymentPage />} />
+          <Route path="/video-analysis" element={<VideoAnalysisPage />} />
+          
           {/* Protected Routes - Core Features */}
           <Route 
             path="/dashboard" 
