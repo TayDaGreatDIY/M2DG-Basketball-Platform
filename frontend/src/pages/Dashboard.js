@@ -79,6 +79,7 @@ const Dashboard = () => {
     { name: 'Game Scoring', icon: '📊', path: '/scoring', color: 'from-indigo-500 to-blue-500' },
     { name: 'Leaderboards', icon: '🏅', path: '/leaderboards', color: 'from-red-500 to-pink-500' },
     { name: 'Social Hub', icon: '💬', path: '/social', color: 'from-teal-500 to-green-500' },
+    { name: 'Wellness', icon: '🧠', path: '/mental-health', color: 'from-purple-500 to-pink-500' },
     { name: 'Game History', icon: '📋', path: '/game-history', color: 'from-gray-500 to-gray-600' },
     { name: 'Analytics', icon: '📈', path: '/analytics', color: 'from-cyan-500 to-blue-500' },
     { name: 'Progress Track', icon: '🎯', path: '/progress', color: 'from-rose-500 to-red-500' },
