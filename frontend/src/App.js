@@ -34,6 +34,8 @@ import AchievementSystemPage from "./pages/AchievementSystemPage";
 import AdminDemoPage from "./pages/AdminDemoPage";
 import PaymentPage from "./pages/PaymentPage";
 import VideoAnalysisPage from "./pages/VideoAnalysisPage";
+import MentalHealthPage from "./pages/MentalHealthPage";
+import TherapistRegistrationPage from "./pages/TherapistRegistrationPage";
 
 // Protected Route Component
 const ProtectedRoute = ({ children }) => {
