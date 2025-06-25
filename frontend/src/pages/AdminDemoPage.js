@@ -44,6 +44,7 @@ const AdminDemoPage = () => {
     { id: 'notifications', name: '📧 Email Notifications', icon: '✉️' },
     { id: 'social', name: '📱 Social Sharing', icon: '🔗' },
     { id: 'video', name: '🎥 Video Analysis', icon: '📹' },
+    { id: 'mental-health', name: '🧠 Mental Health', icon: '👨‍⚕️' },
     { id: 'gamification', name: '🎮 Gamification', icon: '🏆' },
     { id: 'pwa', name: '📱 PWA Features', icon: '💾' }
   ];
