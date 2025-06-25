@@ -243,6 +243,38 @@ const AdminDemoPage = () => {
           </div>
         );
 
+      case 'mental-health':
+        return (
+          <div className="space-y-8">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold text-white mb-4">🧠 Mental Health Demo</h2>
+              <p className="text-gray-300">Basketball wellness platform with licensed therapists and motivational content</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-white/5 rounded-2xl p-6">
+                <h3 className="text-white font-bold mb-4">👨‍⚕️ Licensed Therapists</h3>
+                <p className="text-gray-300 mb-4">Connect with verified mental health professionals specializing in sports psychology</p>
+                <Link 
+                  to="/mental-health"
+                  className="inline-block bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded-xl transition-colors"
+                >
+                  Explore Mental Health
+                </Link>
+              </div>
+              <div className="bg-white/5 rounded-2xl p-6">
+                <h3 className="text-white font-bold mb-4">🎥 Motivation Hub</h3>
+                <p className="text-gray-300 mb-4">Access inspiring content from basketball legends and motivational speakers</p>
+                <Link 
+                  to="/therapist-registration"
+                  className="inline-block bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded-xl transition-colors"
+                >
+                  Register as Therapist
+                </Link>
+              </div>
+            </div>
+          </div>
+        );
+
       case 'gamification':
         return (
           <div className="space-y-8">
