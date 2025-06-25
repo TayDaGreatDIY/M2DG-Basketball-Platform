@@ -41,6 +41,12 @@ const HomePage = () => {
       title: 'Challenge System',
       description: 'Player vs player challenges, skill-based matchmaking, and competitive leaderboards.',
       color: 'from-indigo-400 to-blue-500'
+    },
+    {
+      icon: '🧠',
+      title: 'Mental Wellness',
+      description: 'Licensed therapists, motivational content, and mindset resources for peak mental performance.',
+      color: 'from-purple-400 to-pink-500'
     }
   ];
 
