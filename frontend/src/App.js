@@ -71,6 +71,8 @@ function AppContent() {
           <Route path="/admin-demo" element={<AdminDemoPage />} />
           <Route path="/payment" element={<PaymentPage />} />
           <Route path="/video-analysis" element={<VideoAnalysisPage />} />
+          <Route path="/mental-health" element={<MentalHealthPage />} />
+          <Route path="/therapist-registration" element={<TherapistRegistrationPage />} />
           
           {/* Protected Routes - Core Features */}
           <Route 
