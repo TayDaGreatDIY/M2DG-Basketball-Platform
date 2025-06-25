@@ -86,6 +86,7 @@ const Navbar = () => {
                 <MobileNavLink to="/teams" onClick={() => setIsMobileMenuOpen(false)}>Teams</MobileNavLink>
                 <MobileNavLink to="/leaderboards" onClick={() => setIsMobileMenuOpen(false)}>Rankings</MobileNavLink>
                 <MobileNavLink to="/social" onClick={() => setIsMobileMenuOpen(false)}>Social</MobileNavLink>
+                <MobileNavLink to="/mental-health" onClick={() => setIsMobileMenuOpen(false)}>Wellness</MobileNavLink>
                 <MobileNavLink to="/profile" onClick={() => setIsMobileMenuOpen(false)}>Profile</MobileNavLink>
                 <button
                   onClick={() => { handleLogout(); setIsMobileMenuOpen(false); }}
